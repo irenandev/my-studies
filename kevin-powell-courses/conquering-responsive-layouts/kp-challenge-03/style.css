@@ -1,0 +1,73 @@
+:root {
+  --ff-default: 'Roboto', sans-serif;
+
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  font-size: 62.5%; /* 1rem = 10px */
+  --fs-medium: 2.1rem;
+  --fs-title: 4.8rem;
+
+  --clr-bg: #23424A;
+  --clr-white: white;
+  --clr-contrast: #38CFD9;
+}
+ /* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-default);
+  font-weight: var(--fw-normal);
+  color: var(--clr-white);
+}
+
+h1 {
+  font-size: var(--fs-title);
+  font-weight: var(--fw-black);
+  margin-bottom: 4rem;
+}
+
+p {
+  font-size: 21px;
+  margin-bottom: 4rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.button {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--clr-contrast);
+  color: var(--clr-bg);
+  font-size: var(--fs-medium);
+  font-weight: var(--fw-bold);
+  padding: 1.6rem 4.8rem;
+  border: none;
+  border-radius: 3.1rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: .7;
+  transition: 300ms ease-in;
+}
+
+.container {
+  width: 80%;
+  max-width: 110rem; /*1100px*/
+  margin: 0 auto;
+}
+
+.hero {
+  background-color: var(--clr-bg);
+  padding: 10rem 0;
+}
+
+.hero-content {
+  width: 60%;
+}
