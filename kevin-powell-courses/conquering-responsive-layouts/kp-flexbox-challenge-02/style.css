@@ -1,0 +1,135 @@
+:root {
+  --ff-default: 'Roboto', sans-serif;
+
+  font-size: 62.5%; /* 1rem = 10px */
+  --fs-normal: 1.6rem;
+  --fs-medium: 2.1rem;
+  --fs-subTitle: 3.6rem;
+  --fs-title: 4.8rem;
+
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  --clr-dark-green: #23424A;
+  --clr-medium-green: #136C72;
+  --clr-white: white;
+  --clr-light-white: rgba(255, 255, 255, 0.85);
+  --crl-purple: #87629A;
+  --clr-contrast: #38CFD9;
+  --clr-dark-grey: #3A3A3A;
+}
+ /* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-default);
+  font-size: var(--fs-normal);
+  font-weight: var(--fw-normal);
+}
+
+h1 {
+  color: var(--clr-white);
+  font-size: var(--fs-title);
+  font-weight: var(--fw-black);
+}
+
+h2 {
+  font-size: var(--fs-subTitle);
+  font-weight: var(--fw-black);
+}
+
+p {
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+}
+
+.button {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--clr-contrast);
+  color: var(--clr-dark-green);
+  font-size: var(--fs-medium);
+  font-weight: var(--fw-bold);
+  padding: 1.6rem 4.8rem;
+  border: none;
+  border-radius: 3.1rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: .7;
+  transition: 300ms ease-in;
+}
+
+.container {
+  width: 80%;
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero {
+  background-color: var(--clr-dark-green);
+  padding: 10rem 0;
+}
+
+.hero_text {
+  width: 63%;
+}
+
+.hero_img {
+  width: 33%;
+  align-self: flex-start;
+}
+
+.hero p {
+  color: var(--clr-light-white);
+  font-size: var(--fs-medium);
+  margin-bottom: 3rem;
+}
+
+.primary-content {
+  padding: 5rem 0;
+}
+
+.content_text {
+  width: 63%;
+}
+
+.content_text h2 {
+  color: var(--clr-medium-green);
+  margin: 3rem 0;
+}
+
+.content_text p {
+  padding-bottom: 3rem;
+}
+
+aside {
+  background-color: var(--clr-medium-green);
+  color: var(--clr-white);
+  width: 33%;
+}
+
+aside h2 {
+  margin-bottom: 3rem;
+}
+
+.info {
+  text-align: center;
+  padding: 4rem;
+  font-size: 1.6rem;
+}
