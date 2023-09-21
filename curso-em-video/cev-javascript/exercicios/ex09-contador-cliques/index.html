@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de cliques</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Contador de cliques</h1>
+  <div class="botoes">
+    <button onclick="contar()">Clique aqui</button>
+    <button onclick="zerar()">Zerar</button>
+  </div>
+
+  <section>
+    <p>O contador está com <strong id="resultado">0</strong> cliques.</p>
+  </section>
+
+  <script>
+    let nContador = 0
+    let res = document.getElementById('resultado')
+
+    function contar() {
+      nContador++
+      res.innerHTML = `${nContador}`
+    }
+
+    function zerar() {
+      nContador = 0
+      res.innerHTML = `${nContador}`
+    }
+  </script>
+</body>
+</html>

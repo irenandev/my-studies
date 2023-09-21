@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pr-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Números com JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Vários cálculos em JavaScript</h1>
+  <button onclick="calcular()">Calcular</button>
+  <section id="resultado">
+    <p>O resultado vai aparecer aqui...</p>
+  </section>
+
+  <script>
+    function calcular() {
+      let num = Number(prompt('Digite um número:'))
+      let res = document.getElementById('resultado')
+      let abs = Math.abs(num)
+      let int = Math.trunc(num)
+      let intProx = Math.round(num)
+      let raizQ = Math.sqrt(num)
+      let raizC = Math.cbrt(num)
+      let elevaDois = Math.pow(num, 2)
+      let elevaTres = Math.pow(num, 3)
+
+
+      res.innerHTML = `<p>O número a ser analisado será <strong>${num}</strong> <hr></p>`
+      res.innerHTML += `<p>O seu valor absoluto é: <strong>${abs}</strong></p>`
+      res.innerHTML += `<p>A sua parte inteira é: <strong>${int}</strong></p>`
+      res.innerHTML += `<p>O valor inteiro mais próximo é: <strong>${intProx}</strong></p>`
+      res.innerHTML += `<p>A sua raiz quadrada é: <strong>${raizQ}</strong></p>`
+      res.innerHTML += `<p>A sua raiz cúbica é: <strong>${raizC}</strong></p>`
+      res.innerHTML += `<p>O valor de <strong>${num}²</strong> é: <strong>${elevaDois}</strong></p>`
+      res.innerHTML += `<p>O valor de <strong>${num}³</strong> é: <strong>${elevaTres}</strong></p>`
+    }
+  </script>
+</body>
+</html>
