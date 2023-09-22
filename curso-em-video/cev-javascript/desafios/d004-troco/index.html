@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculando Troco</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Calculando o Troco</h1>
+  <button onclick="comprar()">Comprar produto</button>
+
+  <script>
+    function comprar() {
+      let pName = prompt('Que produto você está compando?')
+      let pPreco = Number(prompt(`Quando custa o ${pName}, que você está comprando?`))
+      let dCliente = Number(prompt(`Qual foi o valor que você deu para pagar ${pName}`))
+      let cTroco = dCliente - pPreco
+
+      document.body.innerHTML += `<h2>Resumo da Compra!</h2>`
+      document.body.innerHTML += `
+        <p>Você comprou <strong>${pName.toUpperCase()}</strong> que custou <strong>${pPreco.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}</strong>.</p>
+        <p>Deu <strong>${dCliente.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}</strong> em dinheiro e vai receber <strong>${cTroco.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}</strong>.</p>
+      `
+      document.body.innerHTML += `<h3>Obrigado e volte sempre!</h3>`
+    }
+  </script>
+</body>
+</html>
