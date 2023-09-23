@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor monetário</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Conversor R$ ➡ US$</h1>
+  <button onclick="converter()">Converter</button>
+  <section id="resposta">
+    <p>Clique no botão acima para iniciar.</p>
+  </section>
+
+  <script>
+    let cotDolar = Number(prompt('Quanto está a contação do dólar agora?'))
+
+    function converter() {
+      let res = document.getElementById('resposta')
+      let rCarteira = Number(prompt('Quantos R$ você tem na carteira?'))
+      let realEmDolar = rCarteira / cotDolar
+
+      res.innerHTML = `<h2>Valor para ser convertido: <strong>${rCarteira.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong></h2>`
+      res.innerHTML += `
+        <p>Cotação atual: <strong>${cotDolar.toLocaleString('pt-br', {style: 'currency', currency: 'USD'})}.</strong></p>
+        <p>Valor convertido: <strong>${realEmDolar.toLocaleString('pt-br', {style: 'currency', currency: 'USD'})}.</strong></p>
+      `
+    }
+  </script>
+</body>
+</html>
