@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cálculo de desconto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Calcular Desconto</h1>
+  <button onclick="desconto()">Desconto de 10%</button>
+  <section id="resposta">
+    <p>Clique no botão acima para iniciar.</p>
+  </section>
+
+  <script>
+    function desconto() {
+      let res = document.getElementById('resposta')
+      let nProduto = prompt('Qual é o produto que você está comprando?')
+      let vProduto = Number(prompt(`Qual é o preço de ${nProduto}?`))
+      let desconto = 10
+      let vDesconto = desconto * vProduto / 100
+      let vFinal = vProduto - vDesconto
+
+      res.innerHTML = `<h2>Calculando desconto de  <strong>${desconto}%</strong> para <strong>${nProduto.toUpperCase()}</strong></h2>`
+      res.innerHTML += `
+        <p>O preço original era <strong>${vProduto.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong>.</p>
+        <p>Você acaba de ganhar <strong>${vDesconto.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})}</strong> de desconto <strong>(${desconto}%)</strong>.</p>
+        <p>No fim, você vai pagar <strong>${vFinal.toLocaleString("pt-BR",{style: 'currency', currency: 'BRL'})}</strong> no produto <strong>${nProduto.toUpperCase()}</strong>.</p>
+      `
+    }
+  </script>
+</body>
+</html>

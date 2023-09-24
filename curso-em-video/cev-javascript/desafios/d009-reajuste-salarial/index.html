@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reajustar salário</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Reajuste salarial</h1>
+  <button onclick="reajuste()">Reajustar Salário</button>
+  <section id="resposta">
+    <p>Clique no botão acima para iniciar.</p>
+  </section>
+
+  <script>
+    function reajuste() {
+      let res = document.getElementById('resposta')
+      let fNome = prompt(`Qual é o nome do funcionário?`)
+      let atualSal = Number(prompt(`Qual é o salário de ${fNome}?`))
+      let reajuste = Number(prompt(`O salário de ${fNome} vai ser reajustado em qual porcentagem (%)?`))
+      let vReajuste= atualSal * reajuste / 100
+      let novoSal = atualSal + vReajuste
+  
+      res.innerHTML = `<h2><strong>${fNome.toUpperCase()}</strong> recebeu um aumento salarial!</h2>`
+      res.innerHTML += `
+        <p>O salário atual era <strong>${atualSal.toLocaleString("pt-BR", {style: 'currency', currency: "BRL"})}</strong>.</p>
+        <p>Com um aumento de <strong>${reajuste}%</strong>, o salário vai aumentar <strong>${vReajuste.toLocaleString("pt-BR", {style: 'currency', currency: "BRL"})}</strong> no próximo més.</p>
+        <p>E a partir daí, ${fNome.toUpperCase()} vai passar a ganhar: <strong>${novoSal.toLocaleString("pt-BR", {style: 'currency', currency: "BRL"})}</strong>.</p>
+      `
+    }
+  </script>
+</body>
+</html>
