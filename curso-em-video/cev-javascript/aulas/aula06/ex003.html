@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu primeiro programa...</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      font-size: 1.5em;
+      background-color: cornflowerblue;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="res">Olá, Mundo!</h1>
+
+  <script>
+    let n1 = Number(prompt("Digite um número:"))
+    let n2 = Number(prompt("Digite outro número:"))
+    let soma = n1 + n2
+
+    let res = document.getElementById('res')
+
+    alert(`A soma entre ${n1} e ${n2} é igual: ${soma}`)
+    res.innerHTML = `Resultado: ${n1} + ${n2} = ${soma}`
+  </script>
+</body>
+</html>
