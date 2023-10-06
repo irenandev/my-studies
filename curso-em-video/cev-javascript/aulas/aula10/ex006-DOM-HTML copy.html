@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos DOM em JavaScript</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1b1b1b;
+      color: black;
+    }
+
+    .area {
+      width: 400px;
+      height: 400px;
+      background: gold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 20px solid goldenrod;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+    <p>Clique aqui!</p>
+  </div>
+
+  <script>
+    let mouse = document.querySelector('.area')
+
+    function clicar() {
+      mouse.innerText = "Clicou"
+      mouse.style.borderRadius = '50%'
+    }
+
+    function entrar() {
+      mouse.innerText = 'Entrou!'
+      mouse.style.borderRadius = '20%'
+    }
+
+    function sair() {
+      mouse.innerText = 'Saiu!'
+      mouse.style.borderRadius = '0'
+    }
+  </script>
+</body>
+</html>

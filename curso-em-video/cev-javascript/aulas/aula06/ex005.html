@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primeiros passos com DOM</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      background-color: #1B1B1B;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      color:  #d7d8e6;
+      margin-block: 1rem;
+    }
+
+    button {
+      background-color: gold;
+      color: black;
+      font-size: 1.3rem;
+      border: none;
+      font-family: inherit;
+      padding: 1.4rem;
+    }
+
+    button:focus,
+    button:hover {
+      opacity: .7;
+    }
+
+    strong {
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>Iniciando estudos DOM</h1>
+    <ul>
+      <li>Exemplo: <strong>1</strong></li>
+      <li>Exemplo: <strong id="msg">2</strong></li>
+      <li>Exemplo: <strong class="msg">3</strong></li>
+      <li>Exemplo: <strong name="msg">4</strong></li>
+      <li>Exemplo: <strong class="msg2">5</strong></li>
+      <li>Exemplo: <strong>6</strong></li>
+    </ul>
+  </main>
+
+  <script>
+    let exemplo = document.getElementsByTagName('strong')[0]
+    exemplo.innerText = `usando getElementsByTagName()`
+
+    let exemploId = document.getElementById('msg')
+    exemploId.innerText = `Usando getElementById()`
+
+    let exemploName = document.getElementsByName('msg')[0]
+    exemploName.innerText = `Usando getElementsByName()`
+
+    let exemploClass = document.getElementsByClassName('msg')[0]
+    exemploClass.innerText = `Usando getElementByClassName()`
+
+    let exQuerySelector = document.querySelector('.msg2')
+    exQuerySelector.innerText = `Usando querySelector()`
+
+    let exQuerySelectorAll = document.querySelectorAll('strong')[5]
+    exQuerySelectorAll.innerText = `Usando querySelectorAll()`
+  </script>
+</body>
+</html>
