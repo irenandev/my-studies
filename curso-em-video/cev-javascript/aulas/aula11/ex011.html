@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Origem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>De onde você é?</h1>
+    <div class="box">
+      <div class="iCheck">
+        <input type="text" name="txtPais" id="txtPais" placeholder="Digite seu país">
+        <button>Verificar</button>
+      </div>
+      <p class="res">Resultado:</p>
+    </div>
+  </main>
+
+  <script>
+    let button = document.querySelector('button')
+    button.addEventListener("click", verificar)
+    let res = document.querySelector(".res")
+
+    function verificar() {
+      let pais = document.querySelector("#txtPais").value
+       if(pais.toUpperCase() != "BRASIL") {
+        res.innerHTML = `${pais.toUpperCase()}, <strong>Estrangeiro!</strong>`
+       } else {
+        res.innerHTML = `${pais.toUpperCase()}, <strong>Brasileiro!</strong>`
+       }
+    }
+  </script>
+</body>
+</html>

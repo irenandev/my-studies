@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detran</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Sistema de Multas!</h1>
+    <div class="box">
+      <p>Velocidade do carro:</p>
+      <div class="iCheck">
+        <input type="text" name="txtVel" id="txtVel" placeholder="Km/h">
+        <button>Verificar</button>
+      </div>
+      <p class="res">Resultado:</p>
+    </div>
+  </main>
+
+  <script>
+    let button = document.querySelector("button")
+    button.addEventListener("click", verificar)
+    let res = document.querySelector(".res")
+
+    function verificar() {
+      let vel = Number(document.querySelector("#txtVel").value)
+
+      res.innerHTML = ``
+      res.innerHTML += `<p>Resultado: Velocidade <strong>${vel}Km/h</strong>!</p>`
+
+      if(vel > 60) {
+        res.innerHTML += `<p><strong>MULTADO!</strong></p>`
+      }
+      res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+    }
+  </script>
+</body>
+</html>
