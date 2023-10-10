@@ -13,6 +13,7 @@ function horario() {
   let anoAtual = dSistema.getFullYear()
   let horaAtual = dSistema.getHours()
   let minAtual = dSistema.getMinutes()
+  let segAtual = dSistema.getSeconds()
   
   switch(dSemana) {
     case 0:
@@ -52,8 +53,9 @@ function horario() {
     // Hora Atual com Ternário
     minAtual < 10 ? minAtual = "0" + minAtual : minAtual
     horaAtual < 10 ? horaAtual = "0" + horaAtual : horaAtual
+    segAtual < 10 ? segAtual = "0" + segAtual : segAtual
 
-    hora.innerHTML = `<h1>${horaAtual}:${minAtual}</h1>`
+    hora.innerHTML = `<h1>${horaAtual}:${minAtual}:${segAtual}</h1>`
 
     //Mensagem Condicionais Aninhada
     if(horaAtual >= 0 && horaAtual < 12) {
@@ -73,3 +75,5 @@ function horario() {
       body.style.backgroundPosition = 'center center'
     }
 }
+//executa repetidamente a função a cada 1 segundo
+setInterval(horario, 1000)
