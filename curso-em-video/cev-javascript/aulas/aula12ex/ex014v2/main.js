@@ -35,7 +35,7 @@ function horario() {
       dSemana = `Sexta-feira`
       break
       case 6:
-      dSemana = `Sabado<`
+      dSemana = `Sabado`
       break
     }
     //Condição Simples
