@@ -13,8 +13,10 @@ function sButton() {
 
 function iniciar() {
   const name = prompt('Qual é seu nome?')
-  msg.innerHTML = `Olá, <strong>${name}!</strong> É um grande prazer em te conhecer!`
-  return msg
+
+
+  !isNaN(name) ? alert('Digite apenas LETRAS!')
+               : msg.innerHTML = `Olá, <strong>${name}!</strong> É um grande prazer em te conhecer!`
 }
 
 app.appendChild(sButton())
