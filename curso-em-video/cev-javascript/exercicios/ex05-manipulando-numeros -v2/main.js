@@ -14,7 +14,6 @@ function button() {
   return button
 }
 
-
 function dobro(n) {
   return n * 2
 }
@@ -26,8 +25,13 @@ function metade(n) {
 function inicio() {
   const num = prompt('Digite um número!')
   const m = document.querySelector('p')
-  m.innerHTML = `O dobro de <strong>${num}</strong> é <strong>${dobro(num)}</strong> e a metade é <strong>${metade(num)}</strong>`
-  return m
+
+  if(isNaN(num)) {
+    alert('Digite apenas números!')
+  }  else {
+    m.innerHTML = `O dobro de <strong>${num}</strong> é <strong>${dobro(num)}</strong> e a metade é <strong>${metade(num)}</strong>`
+    return m
+  }
 }
 
 app.appendChild(title)
