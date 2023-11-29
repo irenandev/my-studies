@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+  background-color: rgb(15, 11, 11);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3em;
+  font-weight: 700;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+strong {
+  color: gold;
+}
+
+section {
+  text-align: left;
+}
+
+button {
+  background-color: transparent;
+  padding: 2rem;
+  border-radius: 5rem;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  color: gold;
+  border: .2rem solid gold;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+button:focus,
+button:hover {
+  background-color: gold;
+  color: black;
+}
